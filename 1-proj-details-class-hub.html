@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-Details-1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yht8uys.css">
+</head>
+<body>
+<header>
+    <nav class="nav-bar">
+        <h2><a href="index.html">HOME</a></h2>
+        <h2><a class="active" href="works.html">WORKS</a></h2>
+        <h2><a href="contact.html">CONTACT</a></h2>
+        <h2><a href="bio.html">BIOGRAPHY</a></h2>
+</nav>
+</header>
+<main>
+    <!-- <section>
+        <div>
+            <h1 class="works-title">WORKS</h1>
+            <h1 class="detail-title">ANSPACH HALL DESIGNS</h1>
+        </div>
+        <div>
+            <img class="main-img-works" src="Projects/Project 01/wrap-pic.jpeg" alt="main project image" width="300px">
+            <p class="works-description">These projects were for the College of Liberal Arts and Social Sciences (CLASS) at Central Michigan University, in Anspach Hall. The CLASS Student Hub wall wrap was for a room students in the college could use for homework and other activities. Similarly, the quiet room and collaboration room door wraps denoted rooms for CLASS students to use.
+            My coworker, Helena Schneider, designed the logo for the CLASS Student Hub, and I matched her design elements to create the wrap for the student hub itself.
+                </p>
+        </div>
+        <div>
+            <img class="detail-1" src="Projects/Project 01/door-1.png" alt="detail-1" width="200px">
+            <img class="detail-2" src="Projects/Project 01/door-2.png" alt="detail-2" width="200px">
+            <img class="detail-3" src="Projects/Project 01/wrap-file.png" alt="detail-3" width="200px">
+            <img class="detail-4" src="Projects/Project 01/door-pic.jpeg" alt="detail-4" width="200px">
+        </div>
+    </section>    -->
+    <div class="works-header">
+        <h1 class="works-title yellow-title">WORKS</h1>
+        <h1 class="black-title">Anspach Hall Designs</h1>
+    </div>
+    <div class="slider-and-text">
+    <div class="slider-container">
+        <button class="slider-button left" id="prevBtn">&#8592;</button>
+        <div class="slider-images" id="sliderTrack">
+          <!-- 🖼️ You can replace these with your own images -->
+          <img src="Projects/Project 01/wrap-file-sq.png" alt="Slide 1" loading="lazy">
+          <img src="Projects/Project 01/wrap-pic-sq.png" alt="Slide 2" loading="lazy">
+          <img src="Projects/Project 01/door-file-sq.png" alt="Slide 3" loading="lazy">
+          <img src="Projects/Project 01/door-pic-sq.png" alt="Slide 4" loading="lazy">
+        </div>
+        <button class="slider-button right" id="nextBtn">&#8594;</button>
+      </div>
+      <p class="works-description">These projects were for the College of Liberal Arts and Social Sciences (CLASS) at Central Michigan University, in Anspach Hall. The CLASS Student Hub wall wrap was for a room students in the college could use for homework and other activities. Similarly, the quiet room and collaboration room door wraps denoted rooms for CLASS students to use.
+        My coworker, Helena Schneider, designed the logo for the CLASS Student Hub, and I matched her design elements to create the wrap for the student hub itself.
+            </p>
+          </div>
+
+    <div class="back-button-container">
+      <button class="back-button" onclick="history.back()">GO BACK</button></div>
+      
+      <script>
+        const slider = document.getElementById('sliderTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slides = slider.querySelectorAll('img');
+        let currentIndex = 0;
+      
+        function updateSlider() {
+          const slideWidth = slides[0].clientWidth;
+          slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+      
+        // 👉 Move to previous image
+        prevBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          updateSlider();
+        });
+      
+        // 👉 Move to next image
+        nextBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % slides.length;
+          updateSlider();
+        });
+      
+        // 🧠 Make sure it resizes correctly
+        window.addEventListener('resize', updateSlider);
+      </script>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-container">
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/veronica-lessing-193a5b2b4/"><img src="linkedin-icon.svg" alt="LinkedIn" /></a>
+              <a href="https://www.instagram.com/vlartanddesign/"><img src="instagram-icon.svg" alt="Instagram" /></a>
+        <div class="footer-bottom">
+          <p>Thank you for visiting!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+  </div>
+</footer>
+</body>
+</html>
