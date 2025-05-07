@@ -246,6 +246,7 @@ body {
             font-weight: 700;
             font-style: italic;
         }
+
   
         
 
@@ -385,7 +386,7 @@ body {
     .slider-container {
         position: relative;
         width: 80%;
-        max-width: 600px;
+        max-width: 480px;
         margin: 0px; 
         overflow: hidden;
         border-radius: 10px;
